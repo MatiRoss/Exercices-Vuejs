@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="main">
+    <input type="text" v-model="H1text">
+    <h1 :class="{color : isChecked}">{{ H1text }}</h1>
+    <button v-on:click="changeH2"> Choissisez le H2</button>
+    <br>
+    <br>
+    <input type="text" v-model="H2temp">
+    <h2 :class="{color : isChecked}">{{ H2text }}</h2>
+    <br>
+    <input type="checkbox" id="checkbox" v-model="isChecked">
+    <label for="checkbox">Mettre les titres en rouge</label>
+    <br>
+    <br>
+    <input type="checkbox" id="checkboxImage" v-model="seen">
+    <label for="checkboxImage">Afficher l'image</label>
+    <br>
+    <br>
+    <img src="https://www.journaldugeek.com/content/uploads/2021/01/dragon-ball-4995675-1280-640x492.jpg" v-if="seen">
+</div>
+
+<script src="main.js">
+
+</script>
+</body>
+
+</html>
